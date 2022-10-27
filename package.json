@@ -9,7 +9,14 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "format": "prettier --plugin-search-dir . --write ."
+    "format": "prettier --plugin-search-dir . --write .",
+    "wg:start": "wunderctl up --debug",
+    "wg:generate": "wunderctl generate up --debug",
+    "wg:check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@wundergraph/sdk": "^0.116.1",
+    "graphql": "^16.3.0"
   },
   "devDependencies": {
     "@fontsource/fira-mono": "^4.5.0",
@@ -31,6 +38,9 @@
     "tslib": "^2.3.1",
     "typescript": "^4.7.4",
     "vite": "^3.1.0"
+  },
+  "engines": {
+    "node": "16.x"
   },
   "type": "module"
 }
